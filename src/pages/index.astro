@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+const pageTitle = "Astro";
 ---
 
 <a href="/">Home</a>
@@ -8,8 +9,13 @@ import Card from '../components/Card.astro';
 <a href="/blogs">Blogs</a>
 
 <Layout title="Welcome to Astro.">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{pageTitle}</title>
+	  </head>
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1>Welcome to <span class="text-gradient">{pageTitle}</span></h1>
 		<p class="instructions">
 			To get started, open the directory <code>src/pages</code> in your project.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
